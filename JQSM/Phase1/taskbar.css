@@ -3,7 +3,7 @@
     min-width: 320px;
  }
 
-div.menu {
+.menu {
   top: 5px;
   height: 50px;
   width: 100%;  
@@ -39,15 +39,15 @@ div.menu {
   color: #888;
   text-align: center;
   transition: all 0.5s ease;
-  padding: 17px 0px 17px 0px;
+  padding-left: max(5px, 5%);
+  padding-right: max(5px, 5%);
   text-decoration: none;
-  width: 220px;
-  min-width: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .link:hover {
   background-color: #0D9;
-  color: white;
 }
 
 .searchbar {
@@ -63,18 +63,13 @@ div.menu {
   background-color: #DDD; 
   border: 1px #CCC solid;
   color: #888;
-  padding: 9px 16px ;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.1s ease;
-  font-size: 16px;
+  padding: 5px 7px ;
   margin: 0px 5px 0px 0px;
   border-radius: 20px;
 }
 
 button:hover {
   background-color: #0D9;
-  color: white;
 }
 
 ul {
