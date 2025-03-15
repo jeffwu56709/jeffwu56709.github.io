@@ -1,6 +1,6 @@
- #wrapper{
+#wrapper{
     margin:0 auto;
-    min-width: 320px;
+    min-width: 320px; 
  }
 
 .menu {
@@ -27,7 +27,7 @@
 
 .qsm{
   display: inline-block;
-  color: #666;
+  color: #444;
   text-align: center;
   font-size: 16px;
   padding: 0px 5px 0px 0px;
@@ -37,11 +37,9 @@
 .link {
   display: inline-block;
   color: #888;
-  text-align: center;
   transition: all 0.5s ease;
-  padding-left: max(5px, 5%);
-  padding-right: max(5px, 5%);
-  text-decoration: none;
+  padding-left: max(10px, 3%);
+  padding-right: max(10px, 3%);
   width: 50px;
   height: 50px;
 }
@@ -55,7 +53,7 @@
     padding: 10px 0px 10px 10px;
     margin: 0px 5px 0px 5px;
     border-radius: 20px;
-    width: 35%;
+    width: 45%;
     min-width: 150px;
   }
 
