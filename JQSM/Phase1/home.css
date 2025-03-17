@@ -2,65 +2,114 @@ body {
   font-family: "Lucida Sans", sans-serif;
   .grid-container {
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
       grid-template-columns: repeat(9, 1fr);
       padding: 10px;
       text-align: center;
- }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+    }
+    }
  .grid-container2 {
       display: grid;
-      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(16, 3fr);
+      padding: 10px;
+      text-align: center;
+      grid-row-gap: 20px;
+ }
+ .grid-container3 {
+      display: grid;
       grid-template-columns: repeat(9, 1fr);
       padding: 10px;
       text-align: center;
+      img{
+         max-width: 100%;
+         max-height: 100%;
+      }
  }
- 
-img{
-  max-width: 100%;
-  max-height: 100%;
-}
+
 
 .grid-banner {
   background-color: gray;
-  padding: 10px;
-  grid-row: 2 / span 2;
+  padding: 5px;
+  grid-row: 2 / span 4;
   grid-column: 2 / span 3;
 
 }
 
 .grid-cat1{
     background-color: white;
-    grid-row: 2;
+    grid-row: 2 / span 2;
     grid-column: 6;
 }
 
 .grid-cat2{
     background-color: gray;
-    grid-row: 2;
+    grid-row: 2 / span 2;
     grid-column: 7;
 }
 
 .grid-cat3{
     background-color: white;
-    grid-row: 2;
+    grid-row: 2 / span 2;
     grid-column: 8;
 }
 
 .grid-cat4{
     background-color: gray;
-    grid-row: 3;
+    grid-row: 4 / span 2;
     grid-column: 6;
 }
 .grid-cat5{
     background-color: white;
-    grid-row: 3;
+    grid-row: 4 / span 2;
     grid-column: 7;
 }
 
 .grid-cat6{
     background-color: gray;
-    grid-row: 3;
+    grid-row: 4 / span 2;
     grid-column: 8;
+}
+
+.cat-button{
+    color: white;
+    grid-column: 5 / span 3; 
+    grid-row: 2;
+    background-color: #BBB;
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+ }
+
+ .prod-button{
+    color: white;
+    grid-column: 10 / span 3;
+    grid-row: 2;
+    background-color: #BBB;
+    padding: 5px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+ }
+
+.prod-descr{
+    color: white;
+    text-align: left;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.cat-button:hover{
+    background-color: #0D9;
+}
+
+.prod-button:hover{
+    background-color: #0D9;
 }
 
 .grid-prod1{
@@ -96,4 +145,6 @@ img{
 .grid-prod7{
     background-color: gray;
     grid-column: 8;
+}
+
 }
