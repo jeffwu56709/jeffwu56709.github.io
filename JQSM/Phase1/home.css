@@ -1,0 +1,99 @@
+body {
+  font-family: "Lucida Sans", sans-serif;
+  .grid-container {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(9, 1fr);
+      padding: 10px;
+      text-align: center;
+ }
+ .grid-container2 {
+      display: grid;
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(9, 1fr);
+      padding: 10px;
+      text-align: center;
+ }
+ 
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.grid-banner {
+  background-color: gray;
+  padding: 10px;
+  grid-row: 2 / span 2;
+  grid-column: 2 / span 3;
+
+}
+
+.grid-cat1{
+    background-color: white;
+    grid-row: 2;
+    grid-column: 6;
+}
+
+.grid-cat2{
+    background-color: gray;
+    grid-row: 2;
+    grid-column: 7;
+}
+
+.grid-cat3{
+    background-color: white;
+    grid-row: 2;
+    grid-column: 8;
+}
+
+.grid-cat4{
+    background-color: gray;
+    grid-row: 3;
+    grid-column: 6;
+}
+.grid-cat5{
+    background-color: white;
+    grid-row: 3;
+    grid-column: 7;
+}
+
+.grid-cat6{
+    background-color: gray;
+    grid-row: 3;
+    grid-column: 8;
+}
+
+.grid-prod1{
+    background-color: gray;
+    grid-column: 2;
+}
+
+.grid-prod2{
+    background-color: gray;
+    grid-column: 3;
+}
+
+.grid-prod3{
+    background-color: gray;
+    grid-column: 4;
+}
+
+.grid-prod4{
+    background-color: gray;
+    grid-column: 5;
+}
+
+.grid-prod5{
+    background-color: gray;
+    grid-column: 6;
+}
+
+.grid-prod6{
+    background-color: gray;
+    grid-column: 7;
+}
+
+.grid-prod7{
+    background-color: gray;
+    grid-column: 8;
+}
