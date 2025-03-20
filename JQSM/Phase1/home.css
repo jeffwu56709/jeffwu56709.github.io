@@ -1,139 +1,192 @@
 body {
-  font-family: "Verdana", sans-serif;
-  .grid-container {
+    font-family: "Verdana", sans-serif;
+
+    .grid-container {
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       grid-template-columns: repeat(9, 1fr);
       padding: 50px 0px 0px 0px;
-      text-align: center;
-    img{
-      max-width: 100%;
-      max-height: 100%;
+      z-index: 0;
+      img{
+          max-width: 100%;
+          max-height: 100%;
+      }
+      :hover{
+          opacity: 0.15;
+          transition: all 0.6s ease;
+      }
     }
-    }
- .grid-container2 {
+
+    .grid-container2 {
       display: grid;
       grid-template-columns: repeat(16, 1fr);
       padding: 35px 0px 15px;
       text-align: center;
- }
- .grid-container3 {
+    }
+
+    .grid-container3 {
       display: grid;
       grid-template-columns: repeat(9, 1fr);
       padding: 10px;
-      text-align: center;
+      z-index: 0;
       img{
          max-width: 100%;
          max-height: 100%;
       }
- }
+    }
 
+    .grid-banner {
+      grid-row: 1 / span 4;
+      grid-column: 2 / span 3;
+    }
 
-.grid-banner {
-  grid-row: 1 / span 4;
-  grid-column: 2 / span 3;
+    .grid-cat1{
+        grid-row: 1 / span 2;
+        grid-column: 6;
+    }
 
-}
+    .grid-cat2{
+        grid-row: 1 / span 2;
+        grid-column: 7;
+    }
 
-.grid-cat1{
-    grid-row: 1 / span 2;
-    grid-column: 6;
-}
+    .grid-cat3{
+        grid-row: 1 / span 2;
+        grid-column: 8;
+    }
 
-.grid-cat2{
-    grid-row: 1 / span 2;
-    grid-column: 7;
-}
+    .grid-cat4{
+        grid-row: 3 / span 2;
+        grid-column: 6;
+    }
+    .grid-cat5{
+        grid-row: 3 / span 2;
+        grid-column: 7;
+    }
 
-.grid-cat3{
-    grid-row: 1 / span 2;
-    grid-column: 8;
-}
+    .grid-cat6{
+        grid-row: 3 / span 2;
+        grid-column: 8;
+    }
 
-.grid-cat4{
-    grid-row: 3 / span 2;
-    grid-column: 6;
-}
-.grid-cat5{
-    grid-row: 3 / span 2;
-    grid-column: 7;
-}
+    .grid-bannerhover{
+        grid-row: 1 / span 4;
+        grid-column: 2 / span 3;
+        z-index: 1;
+        background-color: transparent;
+        opacity: 1;
+    }
 
-.grid-cat6{
-    grid-row: 3 / span 2;
-    grid-column: 8;
-}
+    .grid-cat1hover{
+        grid-row: 1 / span 2;
+        grid-column: 6;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
 
- .prod-button{
-    color: white;
-    grid-column: 5 / span 3;
-    background-color: #CCC;
-    padding: 10px 10px;
-    border: 2px solid white;
-    border-radius: 20px;
-    transition: all 0.25s ease;
-    text-decoration: none;
- }
+    .grid-cat2hover{
+        grid-row: 1 / span 2;
+        grid-column: 7;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
 
-.cat-button{
-    color: white;
-    grid-column: 10 / span 3; 
-    background-color: #CCC;
-    padding: 10px 10px;
-    border: 2px solid white;
-    border-radius: 20px;
-    transition: all 0.25s ease;
-    text-decoration: none;
- }
+    .grid-cat3hover{
+        grid-row: 1 / span 2;
+        grid-column: 8;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
 
-.prod-descr{
-    color: white;
-    text-align: left;
-    grid-row: 1;
-    grid-column: 2 / span 2;
-}
+    .grid-cat4hover{
+        grid-row: 3 / span 2;
+        grid-column: 6;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
 
-.cat-button:hover{
-    background-color: #0D9;
-}
+    .grid-cat5hover{
+        grid-row: 3 / span 2;
+        grid-column: 7;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
 
-.prod-button:hover{
-    background-color: #0D9;
-}
+    .grid-cat6hover{
+        grid-row: 3 / span 2;
+        grid-column: 8;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
 
-.grid-prod1{
-    background-color: gray;
-    grid-column: 2;
-}
+     .prod-button{
+        color: white;
+        grid-column: 5 / span 3;
+        background-color: #CCC;
+        padding: 10px 10px;
+        border: 2px solid white;
+        border-radius: 20px;
+        transition: all 0.25s ease;
+        text-decoration: none;
+     }
 
-.grid-prod2{
-    background-color: gray;
-    grid-column: 3;
-}
+    .cat-button{
+        color: white;
+        grid-column: 10 / span 3; 
+        background-color: #CCC;
+        padding: 10px 10px;
+        border: 2px solid white;
+        border-radius: 20px;
+        transition: all 0.25s ease;
+        text-decoration: none;
+     }
 
-.grid-prod3{
-    background-color: gray;
-    grid-column: 4;
-}
+    .prod-descr{
+        color: white;
+        text-align: left;
+        grid-row: 1;
+        grid-column: 2 / span 2;
+    }
 
-.grid-prod4{
-    background-color: gray;
-    grid-column: 5;
-}
+    .cat-button:hover{
+        background-color: #0D9;
+    }
 
-.grid-prod5{
-    background-color: gray;
-    grid-column: 6;
-}
+    .prod-button:hover{
+        background-color: #0D9;
+    }
 
-.grid-prod6{
-    background-color: gray;
-    grid-column: 7;
-}
+    .grid-prod1{
+        grid-column: 2;
+    }
 
-.grid-prod7{
-    background-color: gray;
-    grid-column: 8;
-}
+    .grid-prod2{
+        grid-column: 3;
+    }
 
+    .grid-prod3{
+        grid-column: 4;
+    }
+
+    .grid-prod4{
+        grid-column: 5;
+    }
+
+    .grid-prod5{
+        grid-column: 6;
+    }
+
+    .grid-prod6{
+        grid-column: 7;
+    }
+
+    .grid-prod7{
+        grid-column: 8;
+    }
 }
