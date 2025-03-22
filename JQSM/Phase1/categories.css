@@ -1,0 +1,86 @@
+body {
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+}   
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      padding: 50px 0px 0px 0px;
+      z-index: 0;
+      column-gap: 30px;
+      row-gap: 30px;
+      img{
+          max-width: 100%;
+          max-height: 100%;
+      }
+      :hover{
+          opacity: 0.15;
+          transition: all 0.6s ease;
+      }
+    }
+    @media (min-width: 901px) {
+          .grid-container {
+            column-gap: 60px;
+            row-gap: 60px;
+          }
+      }
+    .grid-category1{
+        grid-column: 2 / span 2;
+        grid-row: 1;
+    }
+    
+    .grid-category2{
+        grid-column: 4 / span 2;
+        grid-row: 1;
+    }
+    
+    .grid-category3{
+        grid-column: 6 /span 2;
+        grid-row: 1;
+    }
+    
+    .grid-category1hover{
+        grid-column: 2 / span 2;
+        grid-row: 1;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
+    
+    .grid-category2hover{
+        grid-column: 4 / span 2;
+        grid-row: 1;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
+    
+    .grid-category3hover{
+        grid-column: 6 / span 2;
+        grid-row: 1;
+        z-index: 1;
+        background-color: white;
+        opacity: 0;
+    }
+    
+    .pagination {
+      display: inline-block;
+    }
+    
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .pagination a.active {
+      border-radius: 5px;
+      background-color: #0D9;
+    }
+    
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+        transition: all 0.3s ease;
+    }
