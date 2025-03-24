@@ -10,10 +10,8 @@ body {
       img{
           max-width: 100%;
           max-height: 100%;
-      }
-      :hover{
-          opacity: 0.15;
-          transition: all 0.6s ease;
+          border-style: solid;
+          border-width: 0.15em;
       }
     }
 
@@ -33,10 +31,8 @@ body {
       img{
          max-width: 100%;
          max-height: 100%;
-      }
-      :hover{
-          opacity: 0.15;
-          transition: all 0.6s ease;
+         border-style: solid;
+         border-width: 0.15em;
       }
     }
 
@@ -74,62 +70,7 @@ body {
         grid-column: 8;
     }
 
-    .grid-bannerhover{
-        grid-row: 1 / span 4;
-        grid-column: 2 / span 3;
-        z-index: 1;
-        background-color: transparent;
-        opacity: 1;
-    }
-
-    .grid-cat1hover{
-        grid-row: 1 / span 2;
-        grid-column: 6;
-        z-index: 1;
-        background-color: white;
-        opacity: 0;
-    }
-
-    .grid-cat2hover{
-        grid-row: 1 / span 2;
-        grid-column: 7;
-        z-index: 1;
-        background-color: white;
-        opacity: 0;
-    }
-
-    .grid-cat3hover{
-        grid-row: 1 / span 2;
-        grid-column: 8;
-        z-index: 1;
-        background-color: white;
-        opacity: 0;
-    }
-
-    .grid-cat4hover{
-        grid-row: 3 / span 2;
-        grid-column: 6;
-        z-index: 1;
-        background-color: white;
-        opacity: 0;
-    }
-
-    .grid-cat5hover{
-        grid-row: 3 / span 2;
-        grid-column: 7;
-        z-index: 1;
-        background-color: white;
-        opacity: 0;
-    }
-
-    .grid-cat6hover{
-        grid-row: 3 / span 2;
-        grid-column: 8;
-        z-index: 1;
-        background-color: white;
-        opacity: 0;
-    }
-
+  
      .prod-button{
         color: white;
         grid-column: 5 / span 3;
@@ -157,6 +98,7 @@ body {
         text-align: left;
         grid-row: 1;
         grid-column: 2 / span 2;
+        text-shadow: 4px 4px #558abb;
     }
 
     .cat-button:hover{
@@ -200,55 +142,5 @@ body {
     .grid-prod7{
         grid-row: 2 / span 5;
         grid-column: 8;
-    }
-
-    .grid-prod1hover{
-        grid-row: 2 / span 5 ;
-        grid-column: 2;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
-    }
-    .grid-prod2hover{
-        grid-row: 2 / span 5;
-        grid-column: 3;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
-    }
-    .grid-prod3hover{
-        grid-row: 2 / span 5;
-        grid-column: 4;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
-    }
-    .grid-prod4hover{
-        grid-row: 2 / span 5;
-        grid-column: 5;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
-    }
-    .grid-prod5hover{
-        grid-row: 2 / span 5;
-        grid-column: 6;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
-    }
-    .grid-prod6hover{
-        grid-row: 2 / span 5;
-        grid-column: 7;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
-    }
-    .grid-prod7hover{
-        grid-row: 2 / span 5;
-        grid-column: 8;
-        z-index: 1;
-        opacity: 0;
-        background-color: white;
     }
 }
