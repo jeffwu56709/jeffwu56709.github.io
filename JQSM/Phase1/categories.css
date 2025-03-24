@@ -2,23 +2,21 @@ body {
     font-family: "Verdana", sans-serif;
     text-align: center;
 }   
-
     .firstline{
-        position: relative;
+        font-size: 20px;
+        color: white;
+        text-shadow: 5px 5px #558abb;
     }
-    
-    .firstline select{
-        width: 60px;
+
+    .sortselect {
+      min-width: 200px;
     }
-    
-    .select-items {
-      position: absolute;
-      background-color: DodgerBlue;
-      top: 100%;
-      left: 0;
-      right: 0;
-      z-index: 99;
+
+    .sortselect select {
+      font-size: 1rem;
+      padding: 0.4em 0.7em 0.4em 1.3em;
     }
+
     .grid-container {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
