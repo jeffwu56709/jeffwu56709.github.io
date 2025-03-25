@@ -27,11 +27,12 @@
 
 .qsm{
   display: inline-block;
-  color: #444;
+  color: #777;
   text-align: center;
   font-size: 16px;
   padding: 0px 5px 0px 0px;
   min-width: 140px;
+  -webkit-text-stroke-width: 0.8px;
 }
 
 .link {
