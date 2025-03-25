@@ -1,9 +1,18 @@
 body {
     font-family: "Verdana", sans-serif;
 
+    .firstline{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 5px 5px #558abb;
+        -webkit-text-stroke-width: 0.8px;
+        letter-spacing: 5px;
+    }
+
     .grid-container {
       display: grid;
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(9, 1fr);
       grid-template-columns: repeat(9, 1fr);
       padding: 50px 0px 0px 0px;
       z-index: 0;
@@ -36,38 +45,59 @@ body {
          border-width: 0.15em;
       }
     }
+    .newstext {
+        text-align: center;
+        font-size: 1.25rem;
+        color: white;
+        text-shadow: 5px 5px #558abb;
+        -webkit-text-stroke-width: 0.8px;
+        letter-spacing: 4px;
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    .popcattext {
+        text-align: center;
+        font-size: 1.25rem;
+        color: white;
+        text-shadow: 5px 5px #558abb;
+        -webkit-text-stroke-width: 0.8px;
+        letter-spacing: 4px;
+        grid-row: 1;
+        grid-column: 6 / span 3;
+    }
 
     .grid-banner {
-      grid-row: 1 / span 4;
+      grid-row: 2 / span 8;
       grid-column: 2 / span 3;
     }
 
     .grid-cat1{
-        grid-row: 1 / span 2;
+        grid-row: 2 / span 4;
         grid-column: 6;
     }
 
     .grid-cat2{
-        grid-row: 1 / span 2;
+        grid-row: 2 / span 4;
         grid-column: 7;
     }
 
     .grid-cat3{
-        grid-row: 1 / span 2;
+        grid-row: 2 / span 4;
         grid-column: 8;
     }
 
     .grid-cat4{
-        grid-row: 3 / span 2;
+        grid-row: 6 / span 4;
         grid-column: 6;
     }
     .grid-cat5{
-        grid-row: 3 / span 2;
+        grid-row: 6 / span 4;
         grid-column: 7;
     }
 
     .grid-cat6{
-        grid-row: 3 / span 2;
+        grid-row: 6 / span 4;
         grid-column: 8;
     }
 
@@ -75,23 +105,25 @@ body {
      .prod-button{
         color: white;
         grid-column: 5 / span 3;
-        background-color: #CCC;
+        background-color: #558abb;
         padding: 10px 10px;
         border: 2px solid white;
         border-radius: 20px;
         transition: all 0.25s ease;
         text-decoration: none;
+        -webkit-text-stroke-width: 0.8px;
      }
 
     .cat-button{
         color: white;
         grid-column: 10 / span 3;   
-        background-color: #CCC;
+        background-color: #558abb;
         padding: 10px 10px;
         border: 2px solid white;
         border-radius: 20px;
         transition: all 0.25s ease;
         text-decoration: none;
+        -webkit-text-stroke-width: 0.8px;
      }
 
     .prod-descr{
@@ -100,6 +132,8 @@ body {
         grid-row: 1;
         grid-column: 2 / span 2;
         text-shadow: 4px 4px #558abb;
+        -webkit-text-stroke-width: 0.5px;
+        letter-spacing: 2px;
     }
 
     .cat-button:hover{
