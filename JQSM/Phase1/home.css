@@ -26,8 +26,9 @@ body {
       display: grid;
       grid-template-rows: repeat(6, 1fr);
       grid-template-columns: repeat(9, 1fr);
-      padding: 10px;
+      column-gap: 0.75em;
       z-index: 0;
+      -webkit-text-stroke-width: 0.5px;
       img{
          max-width: 100%;
          max-height: 100%;
