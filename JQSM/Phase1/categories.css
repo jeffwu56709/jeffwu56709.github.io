@@ -3,9 +3,11 @@ body {
     text-align: center;
 }   
     .firstline{
-        font-size: 20px;
+        font-size: 2rem;
         color: white;
         text-shadow: 5px 5px #558abb;
+        -webkit-text-stroke-width: 0.8px;
+        letter-spacing: 5px;
     }
 
     .sortselect {
@@ -20,21 +22,21 @@ body {
     .grid-container {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      padding: 50px 0px 0px 0px;
       z-index: 0;
-      column-gap: 30px;
-      row-gap: 30px;
+      padding: 0.25em 0em;
+      column-gap: 1em;
+      row-gap: 1em;
       img{
           max-width: 100%;
           max-height: 100%;
-          border-style: solid;
-          border-width: 0.25em;
+          border: 0.25em solid black;
       }
     }
     @media (min-width: 901px) {
           .grid-container {
-            column-gap: 60px;
-            row-gap: 60px;
+            column-gap: 2em;
+            row-gap: 2em;
+            padding: 0.5em 0em;
           }
       }
     .grid-category1{
