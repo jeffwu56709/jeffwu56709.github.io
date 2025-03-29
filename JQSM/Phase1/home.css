@@ -110,26 +110,28 @@ body {
   
      .prod-button{
         color: white;
+        font-size: 0.9rem;
         grid-column: 5 / span 3;
         background-color: #558abb;
-        padding: 0.5rem 0.5rem;
+        padding: 0.5rem;
         border: 0.2rem solid white;
         border-radius: 2rem;
         transition: all 0.25s ease;
         text-decoration: none;
-        -webkit-text-stroke-width: 0.03rem;
+        -webkit-text-stroke-width: 0.06rem;
      }
 
     .cat-button{
         color: white;
+        font-size: 0.9rem;
         grid-column: 10 / span 3;   
         background-color: #558abb;
-        padding: 0.5rem 0.5rem;
+        padding: 0.5rem;
         border: 0.2rem solid white;
         border-radius: 2rem;
         transition: all 0.25s ease;
         text-decoration: none;
-        -webkit-text-stroke-width: 0.03rem;
+        -webkit-text-stroke-width: 0.06rem;
      }
 
     .prod-descr{
