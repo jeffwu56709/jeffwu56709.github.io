@@ -1,6 +1,5 @@
 #wrapper{
     margin:0 auto;
-    min-width: 320px; 
  }
 
 .menu {
@@ -51,10 +50,10 @@
 
 .searchbar {
     border: 1px #CCC solid;
-    padding: 10px 0px 10px 10px;
-    margin: 0px 5px 0px 5px;
+    padding: 10px 0px 10px 20px;
+    margin: 0px 10px 0px 5px;
     border-radius: 20px;
-    width: 45%;
+    width: 100%;
     min-width: 150px;
   }
 
@@ -62,7 +61,7 @@
   background-color: #DDD; 
   border: 1px #CCC solid;
   color: #888;
-  padding: 5px 7px ;
+  padding: 5px 6px ;
   margin: 0px 5px 0px 0px;
   border-radius: 20px;
 }
@@ -79,4 +78,10 @@ ul {
 
 body {
   padding-top: 50px;
+}
+
+form, .form-fields {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 700px;
 }
