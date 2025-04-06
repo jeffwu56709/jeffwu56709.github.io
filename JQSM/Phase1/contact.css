@@ -1,0 +1,20 @@
+html{
+      font-size: 14px;
+      min-width: 800px; 
+       @media (min-width: 1001px) {
+          font-size: 16px;
+          }
+}
+
+body {
+    font-family: "Verdana", sans-serif;
+
+    .firstline{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 0.3rem 0.3rem #558abb;
+        -webkit-text-stroke-width: 0.05rem;
+        letter-spacing: 0.4rem;
+    }
+}
