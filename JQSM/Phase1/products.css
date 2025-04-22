@@ -1,156 +1,86 @@
-html{
-      font-size: 14px;
-      min-width: 800px; 
-       @media (min-width: 1001px) {
-          font-size: 16px;
-          .grid-container {
-            column-gap: 1.5em;
-            row-gap: 0.2em;
-            }
-        }
+html {
+  font-size: 14px;
+  min-width: 800px;
+  .grid-row{
+    column-gap: 1em;
+    row-gap: 1em;
+    padding: 0rem 5rem;
+  }
+}
+
+@media (min-width: 1001px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
     font-family: "Verdana", sans-serif;
     text-align: center;
-}   
-    .firstline{
-        text-align: center;
-        font-size: 2rem;
-        color: white;
-        text-shadow: 0.3rem 0.3rem #558abb;
-        -webkit-text-stroke-width: 0.05rem;
-        letter-spacing: 0.4rem;
-    }
+}
 
-    .sortselect {
-      min-width: 200px;
-    }
+.firstline{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0.3rem 0.3rem #558abb;
+    -webkit-text-stroke-width: 0.05rem;
+    letter-spacing: 0.4rem;
+}
 
-    .sortselect select {
-      font-size: 1rem;
-      padding: 0.4rem 0.7rem 0.4rem 1.3rem;
-    }
+.sortselect {
+  min-width: 200px;
+}
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(21, 2fr);
-      padding: 0.5rem;
-      z-index: 0;
-      column-gap: 1rem;
-      row-gap: 0.3rem;
-      color: white;
-      img{
-          max-width: 100%;
-          max-height: 100%;
-          border: 0.25em solid black;
-      }
-    }
-    .grid-category1{
-        grid-column: 4 / span 3;
-        grid-row: 1;
-    }
-    
-    .grid-category2{
-        grid-column: 7 / span 3;
-        grid-row: 1;
-    }
-    
-    .grid-category3{
-        grid-column: 10 / span 3;
-        grid-row: 1;
-    }
-    
-    .grid-category4{
-        grid-column: 13 / span 3;
-        grid-row: 1;
-    }
-    
-    .grid-category5{
-        grid-column: 16 / span 3;
-        grid-row: 1;
-    }
+.sortselect select {
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem 0.4rem 1.3rem;
+}
 
-    .grid-category1-name{
-        grid-column: 4 / span 2;
-        grid-row: 2;
-        text-align: left;
-    }
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  z-index: 0;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 0rem 15rem;
+  margin: 0 auto;
+}
 
-    .grid-category1-price{
-        grid-column: 6;
-        grid-row: 2;
-        text-align: right;
-    }
+.grid-row img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 0.25em solid black;
+}
 
-    .grid-category2-name{
-        grid-column: 7 / span 2;
-        grid-row: 2;
-        text-align: left;
-    }
+.grid-item {
+  padding: 1.5em;
+  border-radius: 2em;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #4a6a6a;
+}
 
-    .grid-category2-price{
-        grid-column: 9;
-        grid-row: 2;
-        text-align: right;
-    }
+.pagination {
+  display: inline-block;
+  border-radius: 2rem;
+  background-color: #EEE;
+}
 
-    .grid-category3-name{
-        grid-column: 10 / span 2;
-        grid-row: 2;
-        text-align: left;
-    }
+.pagination a {
+  color: black;
+  float: left;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+}
 
-    .grid-category3-price{
-        grid-column: 12;
-        grid-row: 2;
-        text-align: right;
-    }
+.pagination a.active {
+  border-radius: 0.3rem;
+  background-color: #0D9;
+}
 
-    .grid-category4-name{
-        grid-column: 13 / span 2;
-        grid-row: 2;
-        text-align: left;
-    }
-
-    .grid-category4-price{
-        grid-column: 15;
-        grid-row: 2;
-        text-align: right;
-    }
-
-    .grid-category5-name{
-        grid-column: 16 / span 2;
-        grid-row: 2;
-        text-align: left;
-    }
-
-    .grid-category5-price{
-        grid-column: 18;
-        grid-row: 2;
-        text-align: right;
-    }
-
-    .pagination {
-      display: inline-block;
-      border-radius: 2rem;
-      background-color: #EEE;
-    }
-    
-    .pagination a {
-      color: black;
-      float: left;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 0.3rem;
-    }
-
-    .pagination a.active {
-      border-radius: 0.3rem;
-      background-color: #0D9;
-    }
-    
-    .pagination a:hover:not(.active) {
-        background-color: #ddd;
-        transition: all 0.3s ease;
-    }
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    transition: all 0.3s ease;
+}
