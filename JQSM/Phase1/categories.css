@@ -1,88 +1,102 @@
-html{
-      font-size: 14px;
-      min-width: 800px; 
-       @media (min-width: 1001px) {
-          font-size: 16px;
-          }
+html {
+  font-size: 14px;
+  min-width: 800px;
+  .grid-row{
+    column-gap: 1em;
+    row-gap: 1em;
+    padding: 0rem 5rem;
+  }
+}
+
+@media (min-width: 1001px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
     font-family: "Verdana", sans-serif;
     text-align: center;
-}   
-    .firstline{
-        text-align: center;
-        font-size: 2rem;
-        color: white;
-        text-shadow: 0.3rem 0.3rem #558abb;
-        -webkit-text-stroke-width: 0.05rem;
-        letter-spacing: 0.4rem;
-    }
+}
 
-    .sortselect {
-      min-width: 10rem;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    .sortselect select {
-      font-size: 1rem;
-      padding: 0.4rem 0.7rem 0.4rem 1.3rem;
-    }
+.firstline{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0.3rem 0.3rem #558abb;
+    -webkit-text-stroke-width: 0.05rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      z-index: 0;
-      padding: 0.25rem 0rem;
-      column-gap: 1rem;
-      row-gap: 1rem;
-      img{
-          max-width: 100%;
-          max-height: 100%;
-          border: 0.25rem solid black;
-      }
-    }
-    @media (min-width: 1001px) {
-          .grid-container {
-            column-gap: 2rem;
-            row-gap: 2rem;
-            padding: 0.5rem 0rem;
-          }
-      }
-    .grid-category1{
-        grid-column: 2 / span 2;
-        grid-row: 1;
-    }
-    
-    .grid-category2{
-        grid-column: 4 / span 2;
-        grid-row: 1;
-    }
-    
-    .grid-category3{
-        grid-column: 6 /span 2;
-        grid-row: 1;
-    }
-    
-    .pagination {
-      display: inline-block;
-      border-radius: 2rem;
-      background-color: #EEE;
-    }
-    
-    .pagination a {
-      color: black;
-      float: left;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-radius: 0.3rem;
-    }
+.sortselect {
+  min-width: 200px;
+}
 
-    .pagination a.active {
-      border-radius: 0.3rem;
-      background-color: #0D9;
-    }
-    
-    .pagination a:hover:not(.active) {
-        background-color: #ddd;
-        transition: all 0.3s ease;
-    }
+.sortselect select {
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem 0.4rem 1.3rem;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  z-index: 0;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 0rem 15rem;
+  margin: 0 auto;
+  -webkit-text-stroke-width: 0.05em;
+}
+
+.grid-row img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 1em;
+  border: 0.25em solid black;
+  transition: transform 0.4s ease;
+  transition: box-shadow 0.4s ease;
+}
+
+.grid-row img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item {
+  padding: 1.5em;
+  border-radius: 2em;
+  text-align: center;
+  color: whitesmoke;
+  background-color: #4a6a6a;
+  font-size: 1.25rem;
+}
+
+.pagination {
+  display: inline-block;
+  border-radius: 2rem;
+  background-color: #EEE;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+}
+
+.pagination a.active {
+  border-radius: 0.3rem;
+  background-color: #0D9;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    transition: all 0.3s ease;
+}
