@@ -20,7 +20,7 @@
 
             if ($product = $result->fetch_assoc()) {
                 echo "<div class='product-container'>";
-                echo "<div class='product-image'><img src='/JQSM/Assets/{$product['image']}' alt='{$product['product_name']}'></div>";
+                echo "<div class='product-image'><img src='/JQSM/Assets/productassets/{$product['image']}' alt='{$product['product_name']}'></div>";
                 echo "<div class='product-info'><p>{$product['product_name']}</p><br>";
                 echo "<p>Price: \${$product['selling_price']}</p>";
                 echo "<p>Stock: {$product['stock_quantity']}</p>";
@@ -33,7 +33,7 @@
                 echo "<p>Category: {$product['category_name']}</p>";
                 echo "<form>";
                     echo "<input type='text' placeholder='Search Products..'' class='searchbar' id='search' name='search'>";
-                    echo "<button type='submit' style='font-size:14px' class ='button'><img src='Assets/search.png' alt='Search' width='25px' height='25px'></button>";
+                    echo "<button type='submit' style='font-size:14px' class ='button'><img src='Assets/navbaricons/search.png' alt='Search' width='25px' height='25px'></button>";
                 echo "</form></div>";
                 echo "<div class='product-desc'><p>{$product['description']}</p></div>";
                 echo "</div>"; 
