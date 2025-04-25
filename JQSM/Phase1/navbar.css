@@ -2,8 +2,9 @@
     margin:0 auto;
  }
 
-html{
+html, body{
   min-width: 800px;
+  margin: 0;
 }
 
 .menu {
@@ -15,64 +16,66 @@ html{
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #EEE;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
   font-family: 'Verdana'; 
   font-size: 14px;
   position: fixed;
   z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo{
   width: 50px;
   height: 50px;
-  padding: 0px 0px 0px 10px;
+  margin-left: 10px;
 }
 
 .qsm{
   display: inline-block;
-  color: #777;
+  color: #c94f7c;
   text-align: center;
   font-size: 16px;
   padding: 0px 5px 0px 0px;
   min-width: 140px;
   -webkit-text-stroke-width: 0.8px;
   text-decoration: none;
+  text-shadow: 0 0 8px rgba(201, 79, 124, 0.5);
 }
 
 .link {
   display: inline-block;
   color: #888;
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
   padding-left: 3%;
   padding-right: 3%;
-  width: 50px;
   height: 50px;
 }
 
 .link:hover {
-  background-color: #0D9;
+  background-color: #ffa09a  ;
 }
 
 .searchbar {
-    border: 1px #CCC solid;
-    padding: 10px 0px 10px 20px;
-    margin: 0px 10px 0px 5px;
-    border-radius: 20px;
+    border: 1px #FFF solid;
+    padding: 5px 0px 5px 20px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 25px;
     width: 100%;
     min-width: 150px;
   }
 
 .button {
-  background-color: #DDD; 
-  border: 1px #CCC solid;
+  background-color: #ffbfbf; 
+  border: 1px #FFF solid;
   color: #888;
   padding: 5px 6px ;
-  margin: 0px 5px 0px 0px;
+  margin: 0px 10px 0px 0px;
   border-radius: 20px;
+  transition: all 0.7s ease;
 }
 
 button:hover {
-  background-color: #0D9;
+  background-color: #ffa09a;
 }
 
 ul {
