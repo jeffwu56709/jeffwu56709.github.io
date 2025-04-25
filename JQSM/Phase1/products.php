@@ -27,7 +27,7 @@
       while ($row = $result->fetch_assoc()) {
         echo "<a href='product.php?id={$row['product_id']}'>";
           echo "<div class='grid-item'>";
-          echo "<img src='/JQSM/Assets/" . $row['image'] . "' alt='" . $row['product_name'] . "'>";
+          echo "<img src='/JQSM/Assets/productassets/" . $row['image'] . "' alt='" . $row['product_name'] . "'>";
           echo "<div>{$row['product_name']}<br>";
           echo "\${$row['selling_price']}</div>";
           echo "</div>";
