@@ -5,10 +5,11 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="indivproduct.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-    <body style="background-color:darkslategrey;"><br><br>
+    <body><br><br>
         <?php
         if (isset($_GET['id'])) {
             $product_id = intval($_GET['id']);
@@ -19,25 +20,33 @@
             $result = $stmt->get_result();
 
             if ($product = $result->fetch_assoc()) {
-                echo "<div class='product-container'>";
-                echo "<div class='product-image'><img src='/JQSM/Assets/productassets/{$product['image']}' alt='{$product['product_name']}'></div>";
-                echo "<div class='product-info'><p>{$product['product_name']}</p><br>";
-                echo "<p>Price: \${$product['selling_price']}</p>";
-                echo "<p>Stock: {$product['stock_quantity']}</p>";
-                if ($product['stock_quantity'] > 0){
-                    echo "<p>AVAILABLE</p>";
-                }
-                else{
-                    echo "<p>OUT OF STOCK</p>";
-                } 
-                echo "<p>Category: {$product['category_name']}</p>";
-                echo "<form>";
-                    echo "<input type='text' placeholder='Search Products..'' class='searchbar' id='search' name='search'>";
-                    echo "<button type='submit' style='font-size:14px' class ='button'><img src='Assets/navbaricons/search.png' alt='Search' width='25px' height='25px'></button>";
-                echo "</form></div>";
-                echo "<div class='product-desc'><p>{$product['description']}</p></div>";
-                echo "</div>"; 
+                echo "<div class='product-page'>";
+                  echo "<div class='product-top'>";
+                    echo "<div class='product-image'>";
+                      echo "<img src='/JQSM/Assets/productassets/{$product['image']}' alt='{$product['product_name']}'>";
+                    echo "</div>";
 
+                    echo "<div class='product-details'>";
+                      echo "<h1>{$product['product_name']}</h1>";
+                      echo "<div class='product-info'>";
+                        echo "<div><strong>Category:</strong> {$product['category_name']}</div>";
+                        echo "<div><strong>Price:</strong> \${$product['selling_price']}</div>";
+                        echo "<div><strong>Stock:</strong> {$product['stock_quantity']} ";
+                        //echo $product['stock_quantity'] > 0 ? "AVAILABLE" : "OUT OF STOCK"; not sure if i like this
+                        echo "</div>";
+                      echo "</div>";
+
+                      echo "<div class='cart-controls'>";
+                        echo "<label>Quantity: <input type='number' value='1' min='1'></label>";
+                        echo "<button>Add to Cart</button>";
+                      echo "</div>";
+                    echo "</div>";
+                  echo "</div>";
+
+                  echo "<div class='product-description'>";
+                    echo "<p>{$product['description']}</p>";
+                  echo "</div>";
+              echo "</div>";
             } else {
                 echo "Product not found.";
             }
