@@ -4,12 +4,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="categories.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body style="background-color:darkslategrey;">
+  <body>
     <br><br>
-  <div class ="firstline">CATEGORIES</div><br>
+  <div class ="heading">CATEGORIES</div><br>
   <div class ="sortselect">
      <select name="sorter" id="sorter">
      <option hidden value="sort">Sort</option>
@@ -20,14 +22,14 @@
   </div>
   <br>
   <?php
-      $sql = "SELECT * FROM categories_1";
+      $sql = "SELECT * FROM categories";
       $result = $conn->query($sql);
       echo "<div class='grid-row'>";
       while ($row = $result->fetch_assoc()) {
         echo "<a href='category.php?id={$row['category_id']}'>";
           echo "<div class='grid-item'>";
           echo "<img src='/JQSM/Assets/categoryassets/" . $row['image'] . "' alt='" . $row['category_name'] . "'>";
-          echo "{$row['category_name']}";
+          echo "<h3>{$row['category_name']}</h3>";
           echo "</div>";
         echo "</a>";
       }
