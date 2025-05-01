@@ -1,90 +1,57 @@
-html {
-  font-size: 14px;
-  min-width: 800px;
-  .grid-row{
-    column-gap: 1em;
-    row-gap: 1em;
-    padding: 0rem 5rem;
-  }
-}
-
-@media (min-width: 1001px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-body {
-    font-family: "Verdana", sans-serif;
-    text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.product-container{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 2em;
-  align-items: start;
-  padding: 0rem 15rem;
+.product-page {
+  max-width: 1000px;
   margin: 0 auto;
-  -webkit-text-stroke-width: 0.05em;
-  background-color: #4a6a6a;
-  padding: 1.5em;
-  margin: 3em;
+  padding: 2em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   border-radius: 2em;
   text-align: center;
-  color: whitesmoke;
-  font-size: 1.25rem;
+  color: #fffdfc;
+  background-color: #fbecd3;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 3px black;
+  letter-spacing: 0.04rem;
 }
 
-.product-info{
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+.product-top {
+  display: flex;
   gap: 2em;
-  align-items: start;
-  padding: 0rem 15rem;
-  margin: 0 auto;
-  -webkit-text-stroke-width: 0.05em;
-  background-color: #4a6a6a;
-  padding: 1em;
-  border-radius: 2em;
-  text-align: center;
-  color: whitesmoke;
-  font-size: 1.25rem;
-}
-
-.product-desc{
-  grid-column: 1 / span 2;
 }
 
 .product-image img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 1em;
-  border: 0.25em solid black;
+  width: 300px;
   height: auto;
+  object-fit: contain;
+  border-radius: 1em;
+  border: 0.25em solid #b89b8c;
 }
 
-.firstline{
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    text-shadow: 0.3rem 0.3rem #558abb;
-    -webkit-text-stroke-width: 0.05rem;
-    letter-spacing: 0.4rem;
-    text-transform: uppercase;
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-.sortselect {
-  min-width: 200px;
+.product-info > div {
+  margin-bottom: 0.5em;
 }
 
-.sortselect select {
-  font-size: 1rem;
-  padding: 0.4rem 0.7rem 0.4rem 1.3rem;
+.cart-controls {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center
 }
 
+.cart-controls input[type="number"] {
+  width: 60px;
+  padding: 4px;
+}
+
+.product-description {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px solid #ccc;
+}
