@@ -4,23 +4,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="categories.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body style="background-color:darkslategrey;">
+  <body>
     <br><br>
     <?php
       $category_id = intval($_GET['id']);
 
-      $stmt = $conn->prepare("SELECT * FROM categories_1 WHERE category_id = ?");
+      $stmt = $conn->prepare("SELECT * FROM categories WHERE category_id = ?");
       $stmt->bind_param("i", $category_id);
       $stmt->execute();
       $result = $stmt->get_result();
 
       if ($row = $result->fetch_assoc()) {
-          echo "<div class='firstline'>{$row['category_name']}</div><br>";  // or category_name if that’s your column
+          echo "<div class='heading'>{$row['category_name']}</div><br>";
+          echo "{$row['description']}<br><br>";
       } else {
-          echo "<div class='firstline'>Category not found</div><br>";
+          echo "<div class='heading'>Category not found</div><br>";
       }
 
       $stmt->close();
