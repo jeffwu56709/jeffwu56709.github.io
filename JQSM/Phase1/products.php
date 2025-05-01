@@ -5,12 +5,13 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="products.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-<body style="background-color:darkslategrey;">
+<body>
   <br><br>
-  <div class ="firstline">PRODUCTS</div><br>
+  <div class ="heading">PRODUCTS</div><br>
   <div class ="sortselect">
      <select name="sorter" id="sorter">
      <option hidden value="sort">Sort</option>
@@ -28,7 +29,7 @@
         echo "<a href='product.php?id={$row['product_id']}'>";
           echo "<div class='grid-item'>";
           echo "<img src='/JQSM/Assets/productassets/" . $row['image'] . "' alt='" . $row['product_name'] . "'>";
-          echo "<div>{$row['product_name']}<br>";
+          echo "<div><h4>{$row['product_name']}</h4>";
           echo "\${$row['selling_price']}</div>";
           echo "</div>";
         echo "</a>";
