@@ -4,11 +4,12 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-<body style="background-color:darkslategrey;">
+<body>
 <br><br>
-  <div class ="firstline">JEFF'S QUICK STOP MART</div>
+  <div class ="heading">JEFF'S QUICK STOP MART</div>
   <br><br>
   <div class="grid-container">
     <div class ="newstext">News</div>
@@ -22,7 +23,7 @@
     <div class="grid-cat6"><img src="https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/00013800294920/216448ad221fcbd0867287fc6c4f7fa2_large.png&width=256&type=webp&quality=80" alt="Category6"></div>
   </div>
   <br>
-  <div class="grid-container3">
+  <div class="grid-container2">
       <div class="prod-descr">New Arrivals</div>
       <div class="grid-prod1"><img src="Assets/Placeholders/pc_tomato.png" alt="Product"></div>
       <div class="grid-prod2"><img src="Assets/Placeholders/pc_tomato.png" alt="Product"></div>
@@ -33,7 +34,7 @@
       <div class="grid-prod7"><img src="Assets/Placeholders/pc_tomato.png" alt="Product"></div>
   </div>
   <br>
-  <div class="grid-container3">
+  <div class="grid-container2">
     <div class="prod-descr">On Sale</div>
     <div class="grid-prod1"><img src="Assets/Placeholders/pc_milk.jpg" alt="Product"></div>
     <div class="grid-prod2"><img src="Assets/Placeholders/pc_milk.jpg" alt="Product"></div>
@@ -44,7 +45,7 @@
     <div class="grid-prod7"><img src="Assets/Placeholders/pc_milk.jpg" alt="Product"></div>
   </div>
   <br>
-  <div class="grid-container3">
+  <div class="grid-container2">
       <div class="prod-descr">Best Sellers</div>
       <div class="grid-prod1"><img src="Assets/Placeholders/pc_carrot.webp" alt="Product"></div>
       <div class="grid-prod2"><img src="Assets/Placeholders/pc_carrot.webp" alt="Product"></div>
@@ -53,11 +54,6 @@
       <div class="grid-prod5"><img src="Assets/Placeholders/pc_carrot.webp" alt="Product"></div>
       <div class="grid-prod6"><img src="Assets/Placeholders/pc_carrot.webp" alt="Product"></div>
       <div class="grid-prod7"><img src="Assets/Placeholders/pc_carrot.webp" alt="Product"></div>
-  </div>
-  <br><br>
-  <div class="grid-container2">
-      <a href="products.php" class="prod-button">View All Products</a>
-      <a href="categories.php" class="cat-button">View All Categories</a>
   </div>
   <br><br><br><br>
 </body>
