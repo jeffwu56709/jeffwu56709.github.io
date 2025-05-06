@@ -66,7 +66,7 @@ html, body{
   height: 50  px;
 }
 
-.link:hover, button:hover {
+.link:hover, .searchbutton:hover {
   background-color: #ffa09a;
 }
 
@@ -85,10 +85,9 @@ html, body{
   color: #999;
 }
 
-.button {
-  background-color: #ffbfbf; 
+.searchbutton {
+  background-color: #f4c6b9; 
   border: 1px #FFF solid;
-  color: #888;
   padding: 5px 6px ;
   margin: 0px 10px 0px 0px;
   border-radius: 20px;
@@ -105,7 +104,7 @@ body {
   padding-top: 50px;
 }
 
-form, .form-fields {
+.menu form, .form-fields {
   display: flex;
   flex-wrap: nowrap;
   width: 700px;
