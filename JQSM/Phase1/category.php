@@ -63,6 +63,10 @@
     }
   ?>
   <br><br>
+  <a href="categories.php">
+    <div class="button">Return to Categories</div>
+  </a>
+  <br><br><br>
   <div class="pagination">
       <a href="#">&laquo;</a>
       <a class="active" href="#">1</a>
