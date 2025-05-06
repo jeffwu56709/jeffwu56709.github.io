@@ -36,6 +36,10 @@
       echo "</div>";
     ?>
   <br><br>
+  <a href="products.php">
+    <div class="button">View All Products</div>
+  </a>
+  <br><br><br>
   <div class="pagination">
       <a href="#">&laquo;</a>
       <a class="active" href="#">1</a>
