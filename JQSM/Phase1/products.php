@@ -21,6 +21,9 @@
   </select>
   </div>
   <br>
+  <?php if (isset($_GET['added'])): ?>
+    <div class="alert success">Added to cart!</div>
+  <?php endif; ?>
     <?php
       $sql = "SELECT * FROM products";
       $result = $conn->query($sql);
@@ -37,6 +40,10 @@
       echo "</div>";
     ?>
   <br><br>
+  <a href="categories.php">
+    <div class="button">Return to Categories</div>
+  </a>
+  <br><br><br>
   <div class="pagination">
       <a href="#">&laquo;</a>
       <a class="active" href="#">1</a>
