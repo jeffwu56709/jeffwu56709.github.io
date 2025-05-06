@@ -1,0 +1,42 @@
+.sortselect {
+  min-width: 200px;
+}
+
+.sortselect select {
+  font-size: 1rem;
+  padding: 0.4rem 0.7rem 0.4rem 1.3rem;
+}
+
+.product-table {
+  -webkit-text-stroke-width: 0.025em;
+}
+
+.product-table img{
+}
+
+.product-row {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  background-color: #fbecd3;
+  align-items: flex-start;
+  margin: 1em 2em;
+}
+
+.product-image img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1em;
+  border: 0.25em solid #b89b8c;
+}
+
+.product-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5em 1em;
+  flex: 1;
+}

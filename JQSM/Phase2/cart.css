@@ -1,0 +1,42 @@
+.cart-wrapper {
+  text-align: center;
+  padding: 2em;
+  background-color: #fbecd3;
+  border-radius: 2em;
+  margin: 1em 6em;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.cart-table {
+  border-collapse: collapse;
+  width: auto;
+  min-width: 600px;
+}
+
+.cart-table img{
+  padding: 0.2em;
+  border-radius: 2em;
+  text-align: center;
+  background-color: #b89b8c;
+}
+
+.cart-table tr td {
+  padding: 0.5em 0em;
+}
+
+.cartbuttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.cartbuttons form,
+.cartbuttons a {
+  display: inline-block;
+}
