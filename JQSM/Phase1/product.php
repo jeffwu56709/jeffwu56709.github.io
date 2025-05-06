@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <?php include 'connect.php'; ?>
 <?php include 'navbar.html'; ?>
 <!DOCTYPE html>
@@ -37,8 +40,17 @@
                       echo "</div>";
 
                       echo "<div class='cart-controls'>";
-                        echo "<label>Quantity: <input type='number' value='1' min='1'></label>";
-                        echo "<button>Add to Cart</button>";
+                        echo "<form action='add_to_cart.php' method='POST'>";
+                          echo "<input type='hidden' name='product_id' value='{$product['product_id']}'>";
+                          echo "<input type='hidden' name='product_name' value=\"{$product['product_name']}\">";
+                          echo "<input type='hidden' name='product_price' value=\"{$product['selling_price']}\">";
+                          echo "<input type='hidden' name='product_image' value=\"{$product['image']}\">";
+
+                          echo "<label>Quantity: ";
+                            echo "<input type='number' name='quantity' value='1' min='1'>";
+                          echo "</label>";
+                          echo "<button class='button' type='submit'>Add to Cart</button>";
+                        echo "</form>";
                       echo "</div>";
                     echo "</div>";
                   echo "</div>";
@@ -56,5 +68,6 @@
             echo "No product ID provided.";
         }
         ?>
+        
     </body>
 </html>
