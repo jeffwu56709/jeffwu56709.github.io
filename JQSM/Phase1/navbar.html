@@ -3,21 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google Sans">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body style=background-color:#fffbf4>
         <div id="wrapper">
           <div class="menu">
-            <a href="index.php"><img src="Assets/jefflogo.png" alt="Logo" class="logo"></a>
+            <a href="index.php"><img src="Assets/navbarassets/jefflogo.png" alt="Logo" class="logo"></a>
             <a href="index.php" class ="qsm">Quick Stop Mart</a>
-            <a href="categories.php" class ="link"><img src="Assets/category.png" alt="Categories" width="50px" height="50px"></a>
-            <a href="products.php" class ="link"><img src="Assets/product.webp" alt="Products" width="50px" height="50px"></a>
-            <form>
+            <a href="categories.php" class ="link"><img src="Assets/navbarassets/category.png" alt="Categories" width="50px" height="50px"></a>
+            <a href="products.php" class ="link"><img src="Assets/navbarassets/product.webp" alt="Products" width="50px" height="50px"></a>
+            <form action="search.php" method="get">
                 <input type="text" placeholder="Search Products.." class="searchbar" id="search" name="search">
-                <button type="submit" style="font-size:14px" class ="button"><img src="Assets/search.png" alt="Search" width="25px" height="25px"></button>
+                <button type="submit" style="font-size:14px" class="searchbutton">
+                <img src="Assets/navbarassets/search.png" alt="Search" width="25px" height="25px">
+                </button>
             </form>
-            <a href="contact.html" class ="link"><img src="Assets/contact.png" alt="Contact Us" width="50px" height="50px"></a>
-            <a href="login.html" class ="link"><img src="Assets/login.png" alt="Log In" width="50px" height="50px"></a>
+            <a href="contact.html" class ="link"><img src="Assets/navbarassets/contact.png" alt="Contact Us" width="50px" height="50px"></a>
+            <a href="cart.php" class ="link"><img src="Assets/navbarassets/login.png" alt="Log In" width="50px" height="50px"></a>
           </div>
         </div>
     </body>
