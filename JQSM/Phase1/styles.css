@@ -17,6 +17,7 @@ html {
 body {
   font-family: "Google Sans", sans-serif;
   text-align: center;
+  letter-spacing: 0.1rem;
 }
 
 a {
@@ -25,7 +26,6 @@ a {
 }
 
 .heading{
-  font-family: "Google Sans", sans-serif;
   text-align: center;
   font-size: 2rem;
   color: #444;
@@ -56,7 +56,7 @@ a {
   padding: 1.5em;
   border-radius: 2em;
   text-align: center;
-  color: #fffdfc;
+  color: #555;
   background-color: #fbecd3;
 }
 
@@ -87,4 +87,39 @@ a {
 .pagination a:hover:not(.active) {
     background-color: #ddd;
     transition: all 0.3s ease;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1em;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.button {
+  all:unset;
+  background-color: #f4c6b9;
+  color: #444;
+  padding: 0.6em 1.4em;
+  border: solid white 0.1em;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.05rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #ffa09a;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.editform label {
+  display: block;
 }
