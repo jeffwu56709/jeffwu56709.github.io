@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,16 +15,22 @@
           <div class="menu">
             <a href="index.php"><img src="Assets/navbarassets/jefflogo.png" alt="Logo" class="logo"></a>
             <a href="index.php" class ="qsm">Quick Stop Mart</a>
-            <a href="categories.php" class ="link"><img src="Assets/navbarassets/category.png" alt="Categories" width="50px" height="50px"></a>
-            <a href="products.php" class ="link"><img src="Assets/navbarassets/product.webp" alt="Products" width="50px" height="50px"></a>
+            <a href="categories.php" class ="link">Categories</a>
+            <a href="products.php" class ="link">Products</a>
             <form action="search.php" method="get">
                 <input type="text" placeholder="Search Products.." class="searchbar" id="search" name="search">
                 <button type="submit" style="font-size:14px" class="searchbutton">
                 <img src="Assets/navbarassets/search.png" alt="Search" width="25px" height="25px">
                 </button>
             </form>
-            <a href="contact.html" class ="link"><img src="Assets/navbarassets/contact.png" alt="Contact Us" width="50px" height="50px"></a>
-            <a href="cart.php" class ="link"><img src="Assets/navbarassets/login.png" alt="Log In" width="50px" height="50px"></a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <span>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
+                <a href="cart.php" class ="link">Cart</a>
+                <a href="logout.php" class ="link">Log Out</a>
+              <?php else: ?>
+                <a href="login.php" class ="link">Log In</a>
+                <a href="signup.php" class ="link">Sign Up</a>
+              <?php endif; ?>
           </div>
         </div>
     </body>
