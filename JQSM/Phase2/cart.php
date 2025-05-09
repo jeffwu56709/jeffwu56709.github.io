@@ -5,7 +5,7 @@ $cart = $_SESSION['cart'] ?? [];
 $total = 0;
 ?>
 <?php include 'connect.php'; ?>
-<?php include 'navbar.html'; ?>
+<?php include 'navbar.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
