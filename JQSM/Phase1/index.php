@@ -1,5 +1,5 @@
 <?php include 'connect.php'; ?>
-<?php include 'navbar.html'; ?>
+<?php include 'navbar.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,10 +13,9 @@
   <section class="section">Welcome to</section>
   <div class ="heading">JEFF'S QUICK STOP MART</div>
   <div class="homepage">
-
-  <section class="section">
-    <a href="login.php" class="button">Log In / Sign Up</a>
-  </section>
+  <?php if (isset($_GET['login']) && $_GET['login'] == 'success'): ?>
+    <div class="alert success">Login successful. Welcome back!</div>
+  <?php endif; ?>
 
   <hr class="divider">
 
