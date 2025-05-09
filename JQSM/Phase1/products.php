@@ -1,5 +1,5 @@
 <?php include 'connect.php'; ?>
-<?php include 'navbar.html'; ?>
+<?php include 'navbar.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="products.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-<body>
+  <body>
   <br><br>
   <div class ="heading">PRODUCTS</div><br>
   </div>
