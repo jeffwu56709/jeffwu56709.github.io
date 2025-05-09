@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php include 'connect.php'; ?>
-<?php include 'navbar.html'; ?>
+<?php include 'navbar.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
