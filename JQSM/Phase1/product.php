@@ -25,6 +25,9 @@ if (isset($_GET['id'])) {
   <br><br>
   <?php if ($product): ?>
     <div class="product-page">
+      <?php if (isset($_GET['error']) && $_GET['error'] == 'overstock'): ?>
+        <div class="alert error">You can't add more than the available stock.</div>
+      <?php endif; ?>
       <div class="product-top">
         <div class="product-image">
           <img src="/JQSM/Assets/productassets/<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>">
@@ -43,7 +46,7 @@ if (isset($_GET['id'])) {
               <input type="hidden" name="product_price" value="<?= $product['selling_price'] ?>">
               <input type="hidden" name="product_image" value="<?= htmlspecialchars($product['image']) ?>">
               <label>Quantity:
-                <input type="number" name="quantity" value="1" min="1">
+                <input type="number" name="quantity" value="1" min="1" max= <?= $product['stock_quantity'] ?>>
               </label>
               <button class="button" type="submit">Add to Cart</button>
             </form>
