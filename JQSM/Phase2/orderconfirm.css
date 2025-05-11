@@ -1,0 +1,14 @@
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  font-size: 1em;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.summary-row.total {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1em;
+}
