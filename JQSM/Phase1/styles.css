@@ -65,35 +65,21 @@ a {
   background-color: #fce6e3;
 }
 
-.pagination {
-  display: inline-block;
-  border-radius: 2rem;
-  background-color: #EEE;
-}
-
-.pagination a {
-  color: black;
-  float: left;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 0.3rem;
-}
-
-.pagination a.active {
-  border-radius: 0.3rem;
-  background-color: #fcb69f;
-}
-
-.pagination a:hover:not(.active) {
-    background-color: #ddd;
-    transition: all 0.3s ease;
-}
-
 .alert.success {
   background-color: #d4edda;
   color: #155724;
   padding: 1em;
   border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 1em;
+  border: 1px solid #f5c2c7;
   border-radius: 5px;
   margin-bottom: 1em;
   text-align: center;
@@ -120,6 +106,7 @@ a {
   transform: translateY(-1px);
 }
 
-.editform label {
+.form label {
   display: block;
+  margin: 1em;
 }
