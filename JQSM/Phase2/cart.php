@@ -1,4 +1,3 @@
-
 <?php include 'connect.php'; ?>
 <?php include 'navbar.php'; ?>
 <?php
@@ -34,7 +33,6 @@ $total = 0;
             foreach ($_SESSION['cart'] as $id => $item):
               $subtotal = $item['price'] * $item['quantity'];
               $total += $subtotal;
-              $tax_rate = 0.08875;
               $item_count += $item['quantity'];
             ?>
             <tr>
@@ -50,23 +48,17 @@ $total = 0;
               <td>$<?= $item['price'] ?></td>
               <td><?= $item['quantity'] ?></td>
               <td>$<?= number_format($subtotal, 2) ?></td>
+              <td>
+                <form action="remove_from_cart.php" method="POST" style="display:inline;">
+                  <input type="hidden" name="product_id" value="<?= $id ?>">
+                  <button type="submit" class="button">Remove</button>
+                </form>
+              </td>
             </tr>
             <?php endforeach; ?>
             <tr>
-              <td colspan="3"><strong>Total Items: <?= $item_count ?></strong></td>
+              <td colspan="4"><strong>Total Items: <?= $item_count ?></strong></td>
               <td><strong>$<?= number_format($total, 2) ?></strong></td>
-            </tr>
-            <?php
-              $tax = $total * $tax_rate;
-              $grand_total = $total + $tax;
-            ?>
-            <tr>
-              <td colspan="3">Tax (8.875%):</td>
-              <td>$<?= number_format($tax, 2) ?></td>
-            </tr>
-            <tr>
-              <td colspan="3"><strong>Grand Total:</strong></td>
-              <td><strong>$<?= number_format($grand_total, 2) ?></strong></td>
             </tr>
            </table>
         </div>
@@ -76,8 +68,8 @@ $total = 0;
           <button class="button">Reset Cart</button>
         </form>
 
-        <a href="#">
-          <button class="button">Continue to Payment</button>
+        <a href="orderconfirm.php">
+          <button class="button">Continue to Order Confirmation</button>
         </a>
       </div>
     </div>
