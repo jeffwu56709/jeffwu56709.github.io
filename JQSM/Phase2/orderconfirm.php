@@ -1,5 +1,7 @@
 <?php include 'connect.php'; ?>
 <?php include 'navbar.php'; ?>
+<?php include 'customercheck.php'; ?>
+
 <?php
 $cart = $_SESSION['cart'] ?? [];
 
@@ -18,9 +20,12 @@ $total = 0;
     <div class="cart-wrapper">
       <div class="heading">Order Confirmation</div><br>
 
-      <?php if (empty($cart)): ?>
-        <p>Your cart is empty.</p>
-      <?php else: ?>
+      <?php
+        if (empty($_SESSION['cart'])) {
+          header("Location: cart.php?error=empty");
+          exit;
+        }
+        ?>
         <div>
             <?php 
             $total = 0;
@@ -56,7 +61,6 @@ $total = 0;
               <div><strong>$<?= number_format($grand_total, 2) ?></strong></div>
             </div>
         </div>
-      <?php endif; ?>
       <div class="cartbuttons">
         <form action="cart.php" method="post">
           <button class="button">Back to Cart</button>
