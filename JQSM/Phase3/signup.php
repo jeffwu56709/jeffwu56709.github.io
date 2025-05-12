@@ -6,16 +6,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
   $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-  $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-  $stmt->bind_param("ss", $username, $password);
+  $check = $conn->prepare("SELECT user_id FROM users WHERE username = ?");
+      $check->bind_param("s", $username);
+      $check->execute();
+      $check_result = $check->get_result();
 
-  if ($stmt->execute()) {
-    header("Location: login.php?signup=success");
-    exit;
-  } else {
-    echo "Signup failed. Username might already exist.";
+      if ($check_result->num_rows > 0) {
+        echo "<p class='alert error'>Username already exists.</p>";
+      }
+      else {
+          $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+          $stmt->bind_param("ss", $username, $password);
+
+          if ($stmt->execute()) {
+            header("Location: login.php?signup=success");
+            exit;
+          }
+          else {
+            echo "<p class='alert error'>Error creating account.</p>";
+          }
+      }
   }
-}
+
 ?>
 <html lang="en">
   <head>
