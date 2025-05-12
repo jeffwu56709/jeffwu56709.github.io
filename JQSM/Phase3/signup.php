@@ -1,6 +1,6 @@
 <?php
 include 'connect.php';
-include 'navbar.html';
+include 'navbar.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
