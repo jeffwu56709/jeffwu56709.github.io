@@ -15,7 +15,6 @@ if (session_status() === PHP_SESSION_NONE) {
     <body style=background-color:#fffbf4>
         <div id="wrapper">
           <div class="menu">
-            <a href="index.php"><img src="Assets/navbarassets/jefflogo.png" alt="Logo" class="logo"></a>
             <a href="index.php" class ="qsm">Quick Stop Mart</a>
             <a href="categories.php" class ="link">Categories</a>
             <a href="products.php" class ="link">Products</a>
@@ -25,14 +24,25 @@ if (session_status() === PHP_SESSION_NONE) {
                 <img src="Assets/navbarassets/search.png" alt="Search" width="25px" height="25px">
                 </button>
             </form>
-            <?php if (isset($_SESSION['user_id'])): ?>
-                <span>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
-                <a href="cart.php" class ="link">Cart</a>
-                <a href="logout.php" class ="link">Log Out</a>
-              <?php else: ?>
-                <a href="login.php" class ="link">Log In</a>
-                <a href="signup.php" class ="link">Sign Up</a>
-              <?php endif; ?>
+            <?php if (isset($_SESSION['user_id'], $_SESSION['account_type']) && $_SESSION['account_type'] === 'admin'): ?>
+                <div class="greeting">Hi, <?= htmlspecialchars($_SESSION['username']) ?>!</div>
+                <a href="panel.php" class="link">Panel</a>
+                <a href="logout.php" class="link">Log Out</a>
+
+            <?php elseif (isset($_SESSION['user_id'], $_SESSION['account_type']) && $_SESSION['account_type'] === 'employee'): ?>
+                <span>Hi, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
+                <a href="panel.php" class="link">Panel</a>
+                <a href="logout.php" class="link">Log Out</a>
+
+            <?php elseif (isset($_SESSION['user_id'], $_SESSION['account_type']) && $_SESSION['account_type'] === 'customer'): ?>
+                <span>Hi, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
+                <a href="cart.php" class="link">Cart</a>
+                <a href="logout.php" class="link">Log Out</a>
+
+            <?php else: ?>
+                <a href="login.php" class="link">Log In</a>
+                <a href="signup.php" class="link">Sign Up</a>
+            <?php endif; ?>
           </div>
         </div>
     </body>
