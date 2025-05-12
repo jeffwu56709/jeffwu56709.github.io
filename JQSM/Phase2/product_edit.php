@@ -1,5 +1,7 @@
 <?php include 'connect.php'; ?>
 <?php include 'navbar.php'; ?>
+<?php include 'employeecheck.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,25 +25,25 @@
     $product = $result->fetch_assoc();
   ?>
   <h2>Edit Product: <?= htmlspecialchars($product['product_name']) ?></h2>
-  <div class= "editform">
+  <div class= "form">
     <form action="product_update.php" method="POST">
       <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
 
       <label>Name:
         <input type="text" name="product_name" value="<?= htmlspecialchars($product['product_name']) ?>">
-      </label><br>
+      </label>
 
       <label>Stock Quantity:
         <input type="number" name="stock_quantity" value="<?= $product['stock_quantity'] ?>">
-      </label><br>
+      </label>
 
       <label>Buying Price:
         <input type="text" name="buying_price" value="<?= $product['buying_price'] ?>">
-      </label><br>
+      </label>
 
       <label>Selling Price:
         <input type="text" name="selling_price" value="<?= $product['selling_price'] ?>">
-      </label><br>
+      </label>
 
       <button class="button" type="submit">Save Changes</button>
     </form>
