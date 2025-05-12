@@ -1,5 +1,7 @@
 <?php include 'connect.php'; ?>
 <?php include 'navbar.php'; ?>
+<?php include 'employeecheck.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
