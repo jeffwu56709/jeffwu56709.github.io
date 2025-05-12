@@ -1,12 +1,12 @@
 <?php
 include 'connect.php';
-include 'navbar.html';
+include 'navbar.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $stmt = $conn->prepare("SELECT user_id, password FROM users WHERE username = ?");
+  $stmt = $conn->prepare("SELECT user_id, password, account_type FROM users WHERE username = ?");
   $stmt->bind_param("s", $username);
   $stmt->execute();
   $result = $stmt->get_result();
@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($user && password_verify($password, $user['password'])) {
     $_SESSION['user_id'] = $user['user_id'];
     $_SESSION['username'] = $username;
+    $_SESSION['account_type'] = $user['account_type'];
     header("Location: index.php?login=success");
     exit;
   } else {
