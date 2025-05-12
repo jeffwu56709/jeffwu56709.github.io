@@ -1,5 +1,7 @@
 <?php include 'connect.php'; ?>
 <?php include 'navbar.php'; ?>
+<?php include 'customercheck.php'; ?>
+
 <?php
 $cart = $_SESSION['cart'] ?? [];
 
@@ -14,9 +16,11 @@ $total = 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body><br><br>
+    <?php if (isset($_GET['error']) && $_GET['error'] === 'empty'): ?>
+      <div class="alert error">Your cart is empty. Please add items before confirming an order.</div>
+    <?php endif; ?>
     <div class="cart-wrapper">
       <div class="heading">Shopping Cart</div><br>
-
       <?php if (empty($cart)): ?>
         <p>Your cart is empty.</p>
       <?php else: ?>
