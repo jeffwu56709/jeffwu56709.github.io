@@ -12,15 +12,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $result = $stmt->get_result();
   $user = $result->fetch_assoc();
 
-  if ($user && password_verify($password, $user['password'])) {
-    $_SESSION['user_id'] = $user['user_id'];
-    $_SESSION['username'] = $username;
-    $_SESSION['account_type'] = $user['account_type'];
-    header("Location: index.php?login=success");
-    exit;
+if ($user && password_verify($password, $user['password'])) {
+  $_SESSION['user_id'] = $user['user_id'];
+  $_SESSION['username'] = $username;
+  $_SESSION['account_type'] = $user['account_type'];
+
+  if ($_SESSION['account_type'] === 'admin' || $_SESSION['account_type'] === 'employee') {
+    header("Location: panel.php?login=success");
   } else {
-    echo "Invalid login.";
+    header("Location: index.php?login=success");
   }
+  exit;
+} else {
+  echo "Invalid login.";
+}
 }
 ?>
 <html lang="en">
