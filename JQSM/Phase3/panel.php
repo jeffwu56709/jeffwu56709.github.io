@@ -38,7 +38,7 @@
     <div class="panelgrid">
       <div class="card">
         <div class="button"><a href="inventory.php">View Inventory</a></div>
-        <div class="button"><a href="">View Orders</a></div>
+        <div class="button"><a href="orderhistory.php">View Orders</a></div>
       </div>
     </div>
   </section>
