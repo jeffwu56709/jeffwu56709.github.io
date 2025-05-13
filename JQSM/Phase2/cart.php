@@ -67,14 +67,15 @@ $total = 0;
            </table>
         </div>
       <?php endif; ?>
-      <div class="cartbuttons">
-        <form action="clear_cart.php" method="post">
-          <button class="button">Reset Cart</button>
-        </form>
-
-        <a href="orderconfirm.php">
-          <button class="button">Continue to Order Confirmation</button>
-        </a>
+      <?php if (!empty($_SESSION['cart'])): ?>
+        <div class="cartbuttons">
+          <form action="clear_cart.php" method="post">
+            <button class="button">Reset Cart</button>
+          </form>
+          <a href="orderconfirm.php">
+            <button class="button">Continue to Order Confirmation</button>
+          </a>
+      <?php endif; ?>
       </div>
     </div>
   </body>
