@@ -35,10 +35,14 @@ if (session_status() === PHP_SESSION_NONE) {
                 <a href="logout.php" class="link">Log Out</a>
 
             <?php elseif (isset($_SESSION['user_id'], $_SESSION['account_type']) && $_SESSION['account_type'] === 'customer'): ?>
-                <span>Hi, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
+                <div class="user-dropdown">
+                  <button class="dropbtn">Hi, <?= htmlspecialchars($_SESSION['username']) ?> ▼</button>
+                  <div class="dropdown-content">
+                    <a href="orderhistory.php">Order History</a>
+                    <a href="logout.php">Log Out</a>
+                  </div>
+                </div>
                 <a href="cart.php" class="link">Cart</a>
-                <a href="logout.php" class="link">Log Out</a>
-
             <?php else: ?>
                 <a href="login.php" class="link">Log In</a>
                 <a href="signup.php" class="link">Sign Up</a>
