@@ -1,0 +1,18 @@
+.receipt {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #fbecd3;
+  border-radius: 20px;
+}
+
+.receipt table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.receipt th, .receipt td {
+  padding: 0.5em;
+  text-align: center;
+}
