@@ -25,7 +25,7 @@
       <h2>Admin Actions</h2>
       <div class="panelgrid">
         <div class="card">
-          <div class="button"><a href="createuser.php">Create User</a></div>
+          <a href="createuser.php" class="button">Create User</a>
         </div>
       </div>
     </section>
@@ -37,8 +37,8 @@
     <h2>Employee Actions</h2>
     <div class="panelgrid">
       <div class="card">
-        <div class="button"><a href="inventory.php">View Inventory</a></div>
-        <div class="button"><a href="orderhistory.php">View Orders</a></div>
+        <a href="inventory.php" class="button">View Inventory</a>
+        <a href="orderhistory.php" class="button">View Orders</a>
       </div>
     </div>
   </section>
